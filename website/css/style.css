@@ -188,6 +188,31 @@ main #about_container #about_img img{
     float: right;
 }
 
+main #recipe_container {
+    width: 80%;
+    margin: auto;
+}
+
+main #recipe_container .recipe{
+    width: 100%;
+    display: flex;
+    margin: 50px;
+    border: 1px #000000 solid;
+}
+
+main #recipe_container .recipe .recipe-left{
+    flex: 3;
+}
+
+main #recipe_container .recipe .recipe-right{
+    flex: 2;
+}
+
+main #recipe_container .recipe .recipe-right img{
+    width: 90%;
+}
+
+
 main #contact_container{
     width: 70%;
     margin: auto;
