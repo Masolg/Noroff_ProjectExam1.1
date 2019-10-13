@@ -1,1 +1,3 @@
-# Noroff_ProjectExam1.1
+# Project Exam 1 at Noroff 
+
+## Mathilde Solheim Grøtta
