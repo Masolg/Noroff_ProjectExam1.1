@@ -81,6 +81,49 @@ main {
     background-color: #ecebeb;
 }
 
+main #search_bar #search_write{
+    flex: 3;
+}
+
+main #search_bar #search_write input[type="search"]{
+    border-color: #707070;
+    border-width: thin;
+    background-color: rgba(255, 255, 255, 0.84); /* #ffffff */
+    color: rgba(112, 112, 112, 0.84); /* #707070 */
+    width: 100%;
+    height: 80px;
+    font-size: 23px;
+    padding: 10px;
+}
+
+main #search_bar #search_write input[type="search"]:focus{
+    border: #707070 3px solid;
+}
+
+main #search_bar #search_click{
+    flex: 1;
+}
+
+main #search_bar #search_click input[type="button"]{
+    border-color: #707070;
+    border-width: thin;
+    background-color: #6AA371;
+    width: 100%;
+    height: 80px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+main #search_bar #search_click input[type="button"]:hover{
+    background-color: #d3f3d7;
+    cursor: pointer;
+}
+
+main #search_bar #search_click input[type="button"]:active{
+    background-color: #6aa371;
+    cursor: pointer;
+}
+
 main #headline{
     background-color: #a7d3ac;
     height: 80px;
@@ -107,49 +150,6 @@ main #index_container #search_bar{
     margin: auto;
     display: flex;
     padding-top: 250px;
-}
-
-main #index_container #search_bar #search_write{
-    flex: 3;
-}
-
-main #index_container #search_bar #search_write input[type="search"]{
-    border-color: #707070;
-    border-width: thin;
-    background-color: rgba(255, 255, 255, 0.84); /* #ffffff */
-    color: rgba(112, 112, 112, 0.84); /* #707070 */
-    width: 100%;
-    height: 80px;
-    font-size: 18px;
-    padding: 10px;
-}
-
-main #index_container #search_bar #search_write input[type="search"]:focus{
-    border: #707070 3px solid;
-}
-
-main #index_container #search_bar #search_click{
-    flex: 1;
-}
-
-main #index_container #search_bar #search_click input[type="button"]{
-    border-color: #707070;
-    border-width: thin;
-    background-color: #6AA371;
-    width: 100%;
-    height: 80px;
-    font-size: 18px;
-    padding: 10px;
-}
-
-main #index_container #search_bar #search_click input[type="button"]:hover{
-    background-color: #d3f3d7;
-    cursor: pointer;
-}
-
-main #index_container #search_bar #search_click input[type="button"]:active{
-    background-color: #6aa371;
-    cursor: pointer;
 }
 
 main #about_container{
@@ -188,35 +188,85 @@ main #about_container #about_img img{
     float: right;
 }
 
-main #recipe_container {
-    width: 80%;
+main #search_area{
+    width: 60%;
+    padding-top: 20px;
     margin: auto;
+}
+
+main #search_area #search_bar{
+    width: 100%;
+    display: flex;
+}
+
+main #search_area #search_attributes{
+    height: 195px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+}
+
+main #search_area #search_attributes #attributes-diet{
+    margin-left: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 1;
+}
+
+main #search_area #search_attributes #attributes-allergies{
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 1;
+}
+
+main #search_area #search_attributes #attributes-other{
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 1;
+}
+
+main #recipe_container{
+    /* padding-top: 0px; */
+    width: 60%;
+    margin: auto;
+    min-height: 350px;
+    padding-bottom: 40px;
 }
 
 main #recipe_container .recipe{
     width: 100%;
     display: flex;
-    margin: 50px;
-    border: 1px #000000 solid;
+    margin: 50px 0px 0px 0px;
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 8px #A9A9A9;
 }
 
-main #recipe_container .recipe .recipe-left{
+main #recipe_container .recipe .recipe-text{
+    font-size: 20px;
+    padding: 0px 10px 10px 10px;
     flex: 3;
 }
 
-main #recipe_container .recipe .recipe-right{
+main #recipe_container .recipe .recipe-text h4{
+    font-size: 23px;
+}
+
+main #recipe_container .recipe .recipe-image{
+    /* padding: 10px; */
     flex: 2;
 }
 
-main #recipe_container .recipe .recipe-right img{
-    width: 90%;
+main #recipe_container .recipe .recipe-image img{
+    width: 200px;
+    float: right;
 }
-
 
 main #contact_container{
     width: 70%;
     margin: auto;
-    padding-top: 90px;
+    padding-top: 10px;
     min-height: 600px;
 }
 
@@ -235,7 +285,7 @@ main #contact_container .contactFields input[type="text"]{
     border-color: #707070;
     border-width: thin;
     border-radius: 2px;
-    background-color: #cfcfcf;
+    background-color: #dbdbdb;
     width: 100%;
     height: 20px;
     font-size: 15px;
@@ -257,7 +307,7 @@ main #contact_container .contactFields textarea{
     border-color: #707070;
     border-width: thin;
     border-radius: 2px;
-    background-color: #cfcfcf;
+    background-color: #dbdbdb;
     width: 100%;
     font-size: 15px;
     padding: 10px;
@@ -287,20 +337,23 @@ main #contact_container input[type="submit"]:active{
 }
 
 main #contact_success_container{
+    padding-top: 50px;
     display: flex;
     width: 90%;
+    margin: auto;
+    min-height: 550px;
 }
 
 main #contact_success_container #contact_success_text{
-    flex: 1;
-    margin-left: 60px;
-    margin-top: 100px;
+    flex: 4;
+    /* margin-left: 60px; */
+    /* margin-top: 100px; */
 }
 
 main #contact_success_container #contact_success_text h1{
     color: #707070;
     font-size: 35px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 main #contact_success_container #contact_success_text h2{
@@ -315,8 +368,13 @@ main #contact_success_container #contact_success_text p{
     line-height: 2;
 }
 
-main #order_success_container #contact_success_img{
-    flex: 1;
+main #contact_success_container #contact_success_img{
+    flex: 3;
+}
+
+main #contact_success_container #contact_success_img img{
+    width: 70%;
+    float: right;
 }
 
 footer{

@@ -22,7 +22,6 @@ submitButton.addEventListener("click", function(event){
   }
   else{
     document.getElementById("emailError").style.display = "none";
-    var emailValidated = true;
   }
 
   if(messageField === ""){
