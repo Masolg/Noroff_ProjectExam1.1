@@ -126,11 +126,13 @@ main #search_bar #search_click input[type="button"]:active{
 
 main #headline{
     background-color: #a7d3ac;
-    height: 80px;
+    /* height: 80px; */
+    height: 5vw;
     text-align: center;
     color: #ffffff;
     font-family: RockSalt;
-    font-size: 38px;
+    /* font-size: 38px; */
+    font-size: 2.05vw;
 }
 
 main #headline span{
@@ -142,7 +144,7 @@ main #index_container{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    min-height: 700px;
+    min-height: 703px;
     min-width: 100%;
 }
 
@@ -201,7 +203,7 @@ main #search_area #search_bar{
 }
 
 main #search_area #search_attributes{
-    height: 195px;
+    height: 215px;
     width: 100%;
     border: 1px solid black;
     background-color: white;
@@ -264,6 +266,74 @@ main #recipe_container .recipe .recipe-image img{
     float: right;
 }
 
+main #newsletter_area{
+    width: 60%;
+    margin: auto;
+    height: 60px;
+    padding-bottom: 40px;
+}
+main #newsletter_area #newsletter{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+main #newsletter_area #newsletter #newsletter_write{
+    flex: 3;
+}
+
+main #newsletter_area #newsletter #newsletter_write input[type="search"]{
+    border-color: #707070;
+    border-width: thin;
+    background-color: rgba(255, 255, 255, 0.84); /* #ffffff */
+    color: rgba(112, 112, 112, 0.84); /* #707070 */
+    width: 100%;
+    height: 100%;
+    font-size: 23px;
+    /* padding: 10px; */
+    padding-left: 10px;
+}
+
+main #newsletter_area #newsletter #newsletter_write input[type="search"]:focus{
+    border: #707070 3px solid;
+}
+
+main #newsletter_area #newsletter #newsletter_click{
+    flex: 1;
+}
+
+main #newsletter_area #newsletter #newsletter_click input[type="button"]{
+    border-color: #707070;
+    border-width: thin;
+    background-color: #6AA371;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 10px;
+}
+
+main #newsletter_area #newsletter #newsletter_click input[type="button"]:hover{
+    background-color: #d3f3d7;
+    cursor: pointer;
+}
+
+main #newsletter_area #newsletter #newsletter_click input[type="button"]:active{
+    background-color: #6aa371;
+    cursor: pointer;
+}
+
+main #newsletter_area span#news_error{
+    display: none;
+    /* display: block; */
+    color: #FF0000;
+    height: 0;
+}
+main #newsletter_area span#news_success{
+    display: none;
+    /* display: block; */
+    color: #00BB00;
+    height: 0;
+}
+
 main #contact_container{
     width: 70%;
     margin: auto;
@@ -291,6 +361,7 @@ main #contact_container .contactFields input[type="text"]{
     height: 20px;
     font-size: 15px;
     padding: 10px;
+
 }
 
 main #contact_container .contactFields input[type="text"]:focus{
@@ -312,6 +383,7 @@ main #contact_container .contactFields textarea{
     width: 100%;
     font-size: 15px;
     padding: 10px;
+
 }
 
 main #contact_container .contactFields textarea:focus{
@@ -347,8 +419,6 @@ main #contact_success_container{
 
 main #contact_success_container #contact_success_text{
     flex: 4;
-    /* margin-left: 60px; */
-    /* margin-top: 100px; */
 }
 
 main #contact_success_container #contact_success_text h1{
@@ -398,4 +468,119 @@ footer #social_media img{
 
 footer #social_media img:hover{
     filter: brightness(60%);
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    header{
+        font-size: 16px;
+    }
+    header #header_container #logo{
+        flex: 1;
+    }
+    header #header_container #logo img{
+        padding-left: 10px;
+    }
+    header #header_container nav{
+        flex: 6;
+    }
+
+    main #index_container #search_bar{
+        width: 90%;
+        padding-top: 200px;
+    }
+
+    main #search_area{
+        width: 95%;
+    }
+
+    main #search_area #search_attributes #attributes-diet{
+        margin-left: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex: 1;
+    }
+
+    main #search_area #search_attributes #attributes-allergies{
+        padding-left: 10px;
+        padding-right: 10px;
+        flex: 1;
+    }
+
+    main #search_area #search_attributes #attributes-other{
+        padding-left: 10px;
+        padding-right: 10px;
+        flex: 1;
+    }
+
+    main #about_container{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    main #about_container #about_img{
+        display: flex;
+    }
+
+    main #about_container #about_img img{
+        flex: 1;
+    }
+
+    main #recipe_container{
+        width: 95%;
+        padding-bottom: 20px;
+    }
+
+    main #contact_container{
+        width: 90%;
+    }
+
+    main #contact_container .contactFields input[type="text"]{
+        width: 96.5%;
+        padding: 7px 0px 7px 4px;
+        /* padding-left: 4px; */
+    }
+
+    main #contact_container .contactFields textarea{
+        width: 96.5%;
+        padding: 7px 0px 7px 4px;
+    }
+
+    main #contact_success_container{
+        /* padding-top: 50px;
+        display: flex;
+        width: 90%;
+        margin: auto;
+        min-height: 550px; */
+        flex-direction: column;
+    }
+
+    main #contact_success_container #contact_success_img img{
+        float: none;
+        width: 60%;
+        /* margin: auto; */
+
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    footer #social_media{
+        float: none;
+        height: 100%;
+        width: 240px;
+        margin: auto;
+    }
+
+    footer #social_media img{
+        height: 70%;
+        margin-top: 10px;
+        margin: 10px;
+    }
+
+
+
+
+
 }

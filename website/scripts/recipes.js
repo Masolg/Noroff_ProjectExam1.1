@@ -129,3 +129,40 @@ search_button.addEventListener("click", function(){
         diet_label=diet_label,
         health_labels=health_labels);
 });
+
+
+
+
+
+var subscribeButton = document.getElementById("sign_up_btn");
+
+subscribeButton.addEventListener("click", function(event){
+  var emailField = document.getElementById("newsletter_email").value;
+
+  var emailValidated = false;
+
+  if(emailField === ""){
+    document.getElementById("news_error").style.display = "block";
+    document.getElementById("news_success").style.display = "none";
+  }
+  else{
+    document.getElementById("news_error").style.display = "none";
+    document.getElementById("news_success").style.display = "block";
+  }
+
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9._-]{2,24}$/;
+  var emailTest = emailPattern.test(emailField);
+  if(emailTest === false){
+    document.getElementById("news_error").style.display = "block";
+    document.getElementById("news_success").style.display = "none";
+  }
+  else{
+    document.getElementById("news_error").style.display = "none";
+    document.getElementById("news_success").style.display = "block";
+    // var emailValidated = true;
+  }
+
+  // if (emailValidated){
+  // }
+
+});
