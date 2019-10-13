@@ -579,8 +579,18 @@ footer #social_media img:hover{
         margin: 10px;
     }
 
+    main #newsletter_area{
+        width: 90%;
+    }
+
+    main #newsletter_area #newsletter #newsletter_write input[type="search"]{
+        font-size: 17px;
+        padding-left: 5px;
+    }
 
 
-
+    main #newsletter_area #newsletter #newsletter_click input[type="button"]{
+        font-size: 15px;
+    }
 
 }
